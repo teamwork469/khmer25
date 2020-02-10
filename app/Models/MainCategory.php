@@ -16,9 +16,9 @@ class MainCategory extends Model {
   */
 
   protected $table = 'main_category';
-  // protected $primaryKey = 'id';
+  protected $primaryKey = 'id';
   // public $timestamps = false;
-  protected $guarded = ['id'];
+  protected $guarded = ['main_cat_id'];
   //protected $fillable = ['main__cat_id'];
   // protected $hidden = [];
   // protected $dates = [];
