@@ -41,7 +41,7 @@ class Category extends Model {
     public function main_category()
     {
       //return $this->belongsTo('App\Models\Category');
-      return $this->hasMany('App\Transactions', 'id', 'id');
+      return $this->hasMany('App\Models\Category');
     }
 
   /*
