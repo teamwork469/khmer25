@@ -73,7 +73,7 @@ class CategoryController extends CrudController {
       $this->crud->addField([  // Select
         'label' => "Main Category",
         'type' => 'select2',
-        'name' => 'id', // the db column for the foreign key
+        'name' => 'main_cat_id', // the db column for the foreign key
         'entity' => 'main_category', // the method that defines the relationship in your Model
         'attribute' => 'main_name', // foreign key attribute that is shown to user
         'model' => "App\Models\MainCategory",
