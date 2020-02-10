@@ -68,7 +68,6 @@ class CategoryController extends CrudController {
         'name' => 'name',
         'type' => 'text',
         'label' => "Category",
-        'placeholder' => 'Enter Category',
       ]);
 
       $this->crud->addField([  // Select
