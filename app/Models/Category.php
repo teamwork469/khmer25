@@ -38,10 +38,9 @@ class Category extends Model {
   | RELATIONS
   |--------------------------------------------------------------------------
   */
-    public function main_category()
+    public function category()
     {
-      //return $this->belongsTo('App\Models\Category');
-      return $this->belongsTo('App\Models\Category');
+      return $this->belongsToMany(MainCategory::class);
     }
 
   /*
