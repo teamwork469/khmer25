@@ -26,7 +26,7 @@ class CategoryController extends CrudController {
   public function setupListOperation()
   {
     $this->crud->addColumn([
-      'name' => 'name', // The db column name
+      'name' => 'category_name', // The db column name
       'label' => "Category", // Table column heading
       'type' => 'Text'
     ]);
@@ -35,9 +35,9 @@ class CategoryController extends CrudController {
       // 1-n relationship
       'label' => "Main Category",
       'type' => 'text',
-      'name' => 'main_cat_id', // the db column for the foreign key
+      'name' => 'main_category_id', // the db column for the foreign key
       'entity' => 'main_category', // the method that defines the relationship in your Model
-      'attribute' => 'main_name', // foreign key attribute that is shown to user
+      'attribute' => 'main_category_name', // foreign key attribute that is shown to user
       'model' => "App\Models\MainCategory",
  ]);
 
