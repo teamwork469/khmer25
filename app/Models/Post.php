@@ -7,7 +7,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Models;
 
 
-class Gallery extends Model {
+class Post extends Model {
 
   use CrudTrait;
 
@@ -17,12 +17,12 @@ class Gallery extends Model {
   |--------------------------------------------------------------------------
   */
 
-  protected $table = 'gallery';
-  protected $primaryKey = 'gallery_id';
+  protected $table = 'post';
+  protected $primaryKey = 'post_id';
   // public $timestamps = false;
-  protected $guarded = ['gallery_id'];
+  protected $guarded = ['post_id'];
 
-  protected $fillable = ['gallery_name','created_at','updated_at'];
+  protected $fillable = ['post_name','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
