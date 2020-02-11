@@ -3,7 +3,7 @@
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 
-class CategoryController extends CrudController {
+class GalleryImageController extends CrudController {
 
   use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
   use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -14,9 +14,9 @@ class CategoryController extends CrudController {
 
   public function setup() 
   {
-      $this->crud->setModel("App\Models\Category");
-      $this->crud->setRoute("admin/category");
-      $this->crud->setEntityNameStrings('category', 'category');
+      $this->crud->setModel("App\Models\Gallery");
+      $this->crud->setRoute("admin/gallery");
+      $this->crud->setEntityNameStrings('gallery', 'gallery');
 
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
