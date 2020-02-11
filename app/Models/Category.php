@@ -18,11 +18,11 @@ class Category extends Model {
   */
 
   protected $table = 'category';
-  protected $primaryKey = 'id';
+  protected $primaryKey = 'category_id';
   // public $timestamps = false;
-  //protected $guarded = ['main_cat_id'];
+  protected $guarded = ['category_id'];
 
-  protected $fillable = ['main_cat_id','name','description','created_at','updated_at'];
+  protected $fillable = ['main_category_id','category_name','description','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
