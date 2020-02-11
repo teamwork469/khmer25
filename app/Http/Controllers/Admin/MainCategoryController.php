@@ -24,7 +24,7 @@ class MainCategoryController extends CrudController {
   public function setupListOperation()
   {
     $this->crud->addColumn([
-      'name' => 'main_name', // The db column name
+      'name' => 'main_category_name', // The db column name
       'label' => "Main Category", // Table column heading
       'type' => 'Text'
     ]);
@@ -51,7 +51,7 @@ class MainCategoryController extends CrudController {
       //$this->crud->setValidation(TagCrudRequest::class);
 
       $this->crud->addField([
-        'name' => 'main_name',
+        'name' => 'main_category_name',
         'type' => 'text',
         'label' => "Main Category"
       ]);
