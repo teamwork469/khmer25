@@ -1,10 +1,17 @@
-<?php
+<?php namespace App\Http\Controllers\Admin;
 
-namespace App\Http\Controllers;
+use Backpack\CRUD\app\Http\Controllers\CrudController;
 
-use Illuminate\Http\Request;
 
-class GalleryImageController extends Controller
-{
+class GalleryImageController extends CrudController {
+
+  use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
+  use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
+  use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
+  use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
+  use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
+  use \Backpack\CRUD\app\Http\Controllers\Operations\CloneOperation;
     //
+
+
 }
