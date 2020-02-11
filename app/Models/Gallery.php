@@ -7,7 +7,7 @@ use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Models;
 
 
-class Category extends Model {
+class Gallery extends Model {
 
   use CrudTrait;
 
@@ -17,12 +17,12 @@ class Category extends Model {
   |--------------------------------------------------------------------------
   */
 
-  protected $table = 'category';
-  protected $primaryKey = 'category_id';
+  protected $table = 'gallery';
+  protected $primaryKey = 'gallery_id';
   // public $timestamps = false;
-  protected $guarded = ['category_id'];
+  protected $guarded = ['gallery_id'];
 
-  protected $fillable = ['main_category_id','category_name','description','created_at','updated_at'];
+  protected $fillable = ['gallery_name','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
@@ -38,10 +38,7 @@ class Category extends Model {
   | RELATIONS
   |--------------------------------------------------------------------------
   */
-    public function main_category()
-    {
-      return $this->belongsTo('App\Models\MainCategory','main_category_id');
-    }
+ 
 
   /*
   |--------------------------------------------------------------------------
