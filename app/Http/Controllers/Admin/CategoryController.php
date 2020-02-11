@@ -34,7 +34,7 @@ class CategoryController extends CrudController {
     $this->crud->addColumn([
       // 1-n relationship
       'label' => "Main Category",
-      'type' => 'text',
+      'type' => 'select',
       'name' => 'main_category_id', // the db column for the foreign key
       'entity' => 'main_category', // the method that defines the relationship in your Model
       'attribute' => 'main_category_name', // foreign key attribute that is shown to user
@@ -65,7 +65,7 @@ class CategoryController extends CrudController {
       //$this->crud->setValidation(TagCrudRequest::class);
 
       $this->crud->addField([
-        'name' => 'name',
+        'name' => 'category_name',
         'type' => 'text',
         'label' => "Category",
       ]);
@@ -73,14 +73,14 @@ class CategoryController extends CrudController {
       $this->crud->addField([  // Select
         'label' => "Main Category",
         'type' => 'select2',
-        'name' => 'main_cat_id', // the db column for the foreign key
+        'name' => 'main_category_id', // the db column for the foreign key
         'entity' => 'main_category', // the method that defines the relationship in your Model
-        'attribute' => 'main_name', // foreign key attribute that is shown to user
+        'attribute' => 'main_category_name', // foreign key attribute that is shown to user
         'model' => "App\Models\MainCategory",
      
         // optional
         'options'   => (function ($query) {
-             return $query->orderBy('main_name', 'ASC')->get();
+             return $query->orderBy('main_category_id', 'ASC')->get();
          }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
         ]);
 
