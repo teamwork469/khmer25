@@ -38,7 +38,7 @@ class Category extends Model {
   | RELATIONS
   |--------------------------------------------------------------------------
   */
-    public function category()
+    public function main_category()
     {
       return $this->belongsTo('App\Models\MainCategory','main_category_id');
     }
