@@ -40,7 +40,7 @@ class Category extends Model {
   */
     public function category()
     {
-      return $this->belongsToMany(MainCategory::class);
+      return $this->belongsToMany('App\Models\MainCategory','');
     }
 
   /*
