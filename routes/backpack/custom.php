@@ -12,6 +12,7 @@ Route::group([
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
     Route::crud('category', 'CategoryController');
+    Route::crud('maincategory', 'MainCategoryController');
 }); // this should be the absolute last line of this file
 
 
@@ -21,5 +22,5 @@ Route::group([
     'middleware' => ['web', config('backpack.base.middleware_key', 'admin')],
     'namespace'  => 'App\Http\Controllers\Admin',
 ], function () { // custom admin routes
-    Route::crud('maincategory', 'MainCategoryController');
+    
 }); // this should be the absolute last line of this file
