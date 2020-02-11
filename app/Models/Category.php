@@ -20,9 +20,9 @@ class Category extends Model {
   protected $table = 'category';
   protected $primaryKey = 'id';
   // public $timestamps = false;
-  protected $guarded = ['main_cat_id'];
+  //protected $guarded = ['main_cat_id'];
 
-  protected $fillable = ['id'];
+  protected $fillable = ['main_cat_id','name','description','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
