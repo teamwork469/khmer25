@@ -3,7 +3,7 @@
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 
 
-class MainCategoryController extends CrudController {
+class PostController extends CrudController {
 
   use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
   use \Backpack\CRUD\app\Http\Controllers\Operations\ShowOperation;
@@ -13,9 +13,9 @@ class MainCategoryController extends CrudController {
 
   public function setup() 
   {
-      $this->crud->setModel("App\Models\MainCategory");
-      $this->crud->setRoute("admin/maincategory");
-      $this->crud->setEntityNameStrings('Main Category', 'Main Category');
+      $this->crud->setModel("App\Models\Post");
+      $this->crud->setRoute("admin/post");
+      $this->crud->setEntityNameStrings('Post', 'Post');
 
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
