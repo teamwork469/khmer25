@@ -30,8 +30,8 @@ class MainCategory extends Model {
   */
   public function main_category()
   {
-    //return $this->belongsTo('App\Models\Category');
-    return $this->belongsTo('App\Models\Category');
+ 
+    return $this->belongsToMany(Category::class);
   }
   /*
   |--------------------------------------------------------------------------
