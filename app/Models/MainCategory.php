@@ -16,10 +16,10 @@ class MainCategory extends Model {
   */
 
   protected $table = 'main_category';
-  protected $primaryKey = 'id';
+  protected $primaryKey = 'main_category_id';
   // public $timestamps = false;
   //protected $guarded = ['main_cat_id'];
-  protected $fillable = ['main_name','description','created_at','updated_at'];
+  protected $fillable = ['main_category_main_name','description','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
