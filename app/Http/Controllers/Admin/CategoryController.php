@@ -108,13 +108,6 @@ class CategoryController extends CrudController {
       //   'label' => "Update Date"
       // ]);
 
-      $this->crud->addField([   // select_and_order
-        'name' => 'main_category_name',
-        'label' => "Category",
-        'type' => 'select_and_order',
-        'options' => Category::get()->pluck('category_name','category_id')->toArray(),
-    ]);
-
  
   }
 
