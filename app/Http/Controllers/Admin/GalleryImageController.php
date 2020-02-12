@@ -51,23 +51,31 @@ class GalleryImageController extends CrudController {
   {
       //$this->crud->setValidation(TagCrudRequest::class);
 
-      $this->crud->addField([
-        'name' => 'gallery_name',
-        'type' => 'text',
-        'label' => "Image",
-      ]);
+      // $this->crud->addField([
+      //   'name' => 'gallery_name',
+      //   'type' => 'text',
+      //   'label' => "Image",
+      // ]);
 
-      $this->crud->addField([
-        'name'=>'created_at',
-        'type'=>'date',
-        'label'=>'create_at',
-      ]);
+      // $this->crud->addField([
+      //   'name'=>'created_at',
+      //   'type'=>'date',
+      //   'label'=>'create_at',
+      // ]);
 
-      $this->crud->addField([
-        'name'=>'updated_at',
-        'type'=>'date',
-        'label'=>'updated_at',
-      ]);
+      // $this->crud->addField([
+      //   'name'=>'updated_at',
+      //   'type'=>'date',
+      //   'label'=>'updated_at',
+      // ]);
+
+      $this->crud->adddField([   // Address
+        'name' => 'address',
+        'label' => 'Address',
+        'type' => 'address_algolia',
+        // optional
+        'store_as_json' => true
+    ]);
 
   }
 
