@@ -31,20 +31,16 @@ class GalleryImageController extends CrudController {
       'type' => 'Text'
     ]);
     $this->crud->addColumn([
-      'name' => 'gallery_name', // The db column name
+      'name' => 'created_at', // The db column name
       'label' => "Image", // Table column heading
       'type' => 'Text'
     ]);
     $this->crud->addColumn([
-      'name' => 'gallery_name', // The db column name
+      'name' => 'updated_at', // The db column name
       'label' => "Image", // Table column heading
       'type' => 'Text'
     ]);
-    $this->crud->addColumn([
-      'name' => 'gallery_name', // The db column name
-      'label' => "Image", // Table column heading
-      'type' => 'Text'
-    ]);
+
   
   }
 
