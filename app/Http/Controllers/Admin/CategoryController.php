@@ -85,13 +85,6 @@ class CategoryController extends CrudController {
          }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
         ]);
 
-      //   $this->crud->addField([
-      //     'name' => 'photos',
-      //     'label' => 'Photos',
-      //     'type' => 'upload_multiple',
-      //     // 'disk' => 'public', // filesystem disk if you're using S3 or something custom
-      // ]);
-
       $this->crud->addField([
         'name' => 'description',
         'type' => 'textarea',
