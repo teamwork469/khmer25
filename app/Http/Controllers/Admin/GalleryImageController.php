@@ -133,14 +133,14 @@ $this->crud->addField([   // radio
 
 
 $this->crud->addField([   // select_grouped
-  'label' => 'Articles grouped by categories',
+  'label' => 'Mian grouped by categories',
   'type' => 'select_grouped', //https://github.com/Laravel-Backpack/CRUD/issues/502
-  'name' => 'article_id',
-  'entity' => 'article',
-  'attribute' => 'title',
-  'group_by' => 'category', // the relationship to entity you want to use for grouping
-  'group_by_attribute' => 'name', // the attribute on related model, that you want shown
-  'group_by_relationship_back' => 'articles', // relationship from related model back to this model
+  'name' => 'main_category_id',
+  'entity' => 'main_category',
+  'attribute' => 'main_category_name',
+  'group_by' => 'main_category', // the relationship to entity you want to use for grouping
+  'group_by_attribute' => 'main_category_name', // the attribute on related model, that you want shown
+  'group_by_relationship_back' => 'main_category_id', // relationship from related model back to this model
 ]);
 
 
