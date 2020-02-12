@@ -72,10 +72,7 @@ class GalleryImageController extends CrudController {
         'type'=>'text',
         'label'=>'create_at',
 
-        ////update_at
-        'name'=>'updated_at',
-        'type'=>'date',
-        'label'=>'updated_at',
+
 
   ]);
   /////Tab gallery detail
@@ -87,6 +84,13 @@ class GalleryImageController extends CrudController {
         'options' =>[],
         'allows_null' => false,
         'allows_multiple' => true,
+
+
+
+        ////update_at
+        'name'=>'updated_at',
+        'type'=>'date',
+        'label'=>'updated_at',
       ]);
   }
 
