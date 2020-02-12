@@ -26,6 +26,10 @@ class GalleryImageController extends CrudController {
 
   public function setupListOperation()
   {
+
+    
+
+
     $this->crud->addColumn([
       'name' => 'gallery_name', // The db column name
       'label' => "Image", // Table column heading
@@ -50,62 +54,85 @@ class GalleryImageController extends CrudController {
   public function setupCreateOperation()
   {
 
+    $fields = [
+      [
+        'tab'=>'tab1',
+        'name' => 'gallery_name', // The db column name
+        'label' => "Image", // Table column heading
+        'type' => 'Text'
+      ],
+      [
+        'tab'=>'tab1',
+        'name' => 'created_at', // The db column name
+        'label' => "created_at", // Table column heading
+        'type' => 'Text'
+      ],
+      [
+        'tab'=>'tab2',
+        'name' => 'updated_at', // The db column name
+        'label' => "updated_at", // Table column heading
+        'type' => 'Text'
+      ]
+    ];
+
       //$this->crud->setValidation(TagCrudRequest::class);
 // tab gallery
-      $this->crud->addField( [
-        'tab' => 'Gallery',
-        'name' => 'field1',
-        'label' => "Field 1",
-        'type' => 'select_from_array',
-        'options' =>[
-        ],
-        'allows_null' => true,
-        'allows_multiple' => false,
+  //     $this->crud->addField( 
+  //       [
+  //       'tab' => 'Gallery',
+  //       'name' => 'field1',
+  //       'label' => "Field 1",
+  //       'type' => 'select_from_array',
+  //       'options' =>[],
+  //       'allows_null' => true,
+  //       'allows_multiple' => false,
 
-        ////Field gallery Name
-        'name' => 'gallery_name',
-        'type' => 'text',
-        'label' => "Image",
-        'attributes' => [
-          'placeholder' => 'Some text when empty',
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-6'
-        ],
+  //       ////Field gallery Name
+  //       'name' => 'gallery_name',
+  //       'type' => 'text',
+  //       'label' => "Image",
+  //       'attributes' => [
+  //         'placeholder' => 'Some text when empty',
+  //       ],
+  //       'wrapperAttributes' => [
+  //         'class' => 'form-group col-md-6'
+  //       ],
 
-        ///field create__at
-        'name'=>'created_at',
-        'type'=>'text',
-        'label'=>'create_at',
-        'attributes' => [
-          'placeholder' => 'Some text when empty',
-        ], 
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-6'
-        ],
-  ]);
-  /////Tab gallery detail
-      $this->crud->addField([
-        'tab' => 'Gallery Detail',
-        'name' => 'field2',
-        'label' => "field 2",
-        'type' => 'select_from_array',
-        'options' =>[],
-        'allows_null' => false,
-        'allows_multiple' => true,
+  //       ///field create__at
+  //       'name'=>'created_at',
+  //       'type'=>'text',
+  //       'label'=>'create_at',
+  //       'attributes' => [
+  //         'placeholder' => 'Some text when empty',
+  //       ], 
+  //       'wrapperAttributes' => [
+  //         'class' => 'form-group col-md-6'
+  //       ],
+  // ]);
+  // /////Tab gallery detail
+  //     $this->crud->addField([
+  //       'tab' => 'Gallery Detail',
+  //       'name' => 'field2',
+  //       'label' => "field 2",
+  //       'type' => 'select_from_array',
+  //       'options' =>[],
+  //       'allows_null' => false,
+  //       'allows_multiple' => true,
 
-        ////update_at
-        'name'=>'updated_at',
-        'type'=>'date',
-        'label'=>'updated_at',
+  //       ////update_at
+  //       'name'=>'updated_at',
+  //       'type'=>'date',
+  //       'label'=>'updated_at',
 
-        'attributes' => [
-          'placeholder' => 'Some text when empty',
-        ], 
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-6'
-        ]
-      ]);
+  //       'attributes' => [
+  //         'placeholder' => 'Some text when empty',
+  //       ], 
+  //       'wrapperAttributes' => [
+  //         'class' => 'form-group col-md-6'
+  //       ]
+  //     ]);
+
+    $this->crud->addFields($fields);
   }
 
   public function setupUpdateOperation()
