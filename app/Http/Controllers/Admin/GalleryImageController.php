@@ -55,7 +55,7 @@ class GalleryImageController extends CrudController {
 // select_from_array
       $fields =[
         [
-          'tab' => 'Tab1',
+          'tab' => 'Gallery',
           'name' => 'field1',
           'label' => "Field 1",
           'type' => 'select_from_array',
@@ -64,18 +64,9 @@ class GalleryImageController extends CrudController {
           'allows_multiple' => true,
   
         ],[
-          'tab' => 'Tab2',
+          'tab' => 'Gallery Detail',
           'name' => 'field2',
           'label' => "field 2",
-          'type' => 'select_from_array',
-          'options' =>['sd'],
-          'allows_null' => false,
-          'allows_multiple' => true,          
-        ],
-        [
-          'tab' => 'Tab3',
-          'name' => 'field3',
-          'label' => "field 3",
           'type' => 'select_from_array',
           'options' =>['sd'],
           'allows_null' => false,
