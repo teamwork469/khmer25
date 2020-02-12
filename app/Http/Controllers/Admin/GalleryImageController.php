@@ -67,10 +67,27 @@ class GalleryImageController extends CrudController {
         'type' => 'text',
         'label' => "Image",
 
+        'attributes' => [
+          'placeholder' => 'Some text when empty',
+          'class' => 'form-control some-class',
+        ],
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-12'
+        ],
+
+
         ///field create__at
         'name'=>'created_at',
         'type'=>'text',
         'label'=>'create_at',
+
+        'attributes' => [
+          'placeholder' => 'Some text when empty',
+          'class' => 'form-control some-class',
+        ], 
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-12'
+        ],
 
 
 
