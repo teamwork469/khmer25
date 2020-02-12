@@ -56,35 +56,30 @@ class GalleryImageController extends CrudController {
 
     $fields = [
       [
-        'tab'=>'tab1',
+        'tab'=>'Gallery',
         'name' => 'gallery_name', // The db column name
         'label' => "Image", // Table column heading
         'type' => 'Text'
       ],
       [
-        'tab'=>'tab1',
+        'tab'=>'Gallery',
         'name' => 'created_at', // The db column name
         'label' => "created_at", // Table column heading
         'type' => 'date'
       ],
       [
-        'tab'=>'tab2',
+        'tab'=>'Gallery',
         'name' => 'updated_at', // The db column name
         'label' => "updated_at", // Table column heading
         'type' => 'date'
       ],
       [
-        'tab'=>'tab1',
-        'name' => 'sdsd', // The db column name
+        'tab'=>'Gallery Detail',
+        'name' => 'sd', // The db column name
         'label' => "updated_at", // Table column heading
         'type' => 'date'
       ],
-      [
-        'tab'=>'tab3',
-        'name' => 'sdsds', // The db column name
-        'label' => "updated_at", // Table column heading
-        'type' => 'date'
-      ]
+
     ];
 
       //$this->crud->setValidation(TagCrudRequest::class);
