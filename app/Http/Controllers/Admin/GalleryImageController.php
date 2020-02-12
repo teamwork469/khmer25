@@ -59,31 +59,29 @@ class GalleryImageController extends CrudController {
         'type' => 'select_from_array',
         'options' =>[
         ],
-        'allows_null' => false,
-        'allows_multiple' => true,
+        'allows_null' => true,
+        'allows_multiple' => false,
 
         ////Field gallery Name
         'name' => 'gallery_name',
         'type' => 'text',
         'label' => "Image",
-
         'attributes' => [
           'placeholder' => 'Some text when empty',
         ],
         'wrapperAttributes' => [
-          'class' => 'form-group col-md-12'
+          'class' => 'form-group col-md-6'
         ],
 
         ///field create__at
         'name'=>'created_at',
         'type'=>'text',
         'label'=>'create_at',
-
         'attributes' => [
           'placeholder' => 'Some text when empty',
         ], 
         'wrapperAttributes' => [
-          'class' => 'form-group col-md-12'
+          'class' => 'form-group col-md-6'
         ],
   ]);
   /////Tab gallery detail
@@ -96,12 +94,17 @@ class GalleryImageController extends CrudController {
         'allows_null' => false,
         'allows_multiple' => true,
 
-
-
         ////update_at
         'name'=>'updated_at',
         'type'=>'date',
         'label'=>'updated_at',
+
+        'attributes' => [
+          'placeholder' => 'Some text when empty',
+        ], 
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-6'
+        ]
       ]);
   }
 
