@@ -49,8 +49,7 @@ class GalleryImageController extends CrudController {
 
   public function setupCreateOperation()
   {
-    $this->crud->enableTabs();
-    $this->crud->enableHorizontalTabs();
+
       //$this->crud->setValidation(TagCrudRequest::class);
 // select_from_array
       $fields =[
@@ -59,7 +58,13 @@ class GalleryImageController extends CrudController {
           'name' => 'field1',
           'label' => "Field 1",
           'type' => 'select_from_array',
-          'options' =>['sd'],
+          'options' =>[
+                 $this->crud->addFields([
+                 'name' => 'gallery_name',
+                 'type' => 'text',
+                 'label' => "Image",
+                 ])
+          ],
           'allows_null' => false,
           'allows_multiple' => true,
   
