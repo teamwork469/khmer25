@@ -51,35 +51,44 @@ class GalleryImageController extends CrudController {
   {
       //$this->crud->setValidation(TagCrudRequest::class);
 // select_from_array
+      // $this->crud->addField([
+      //   'name' => 'select_from_array',
+      //   'label' => "Select from array",
+      //   'type' => 'select_from_array',
+      //   'options' =>['sd'],
+      //   'allows_null' => false,
+      //   'allows_multiple' => true,
+      //   'tab' => 'Tab name here',
+      // ]);
+     
+
       $this->crud->addField([
-        'name' => 'select_from_array',
-        'label' => "Select from array",
-        'type' => 'select_from_array',
-        'allows_null' => false,
-        'allows_multiple' => true,
-        'tab' => 'Tab name here',
-      ],[
         'name' => 'gallery_name',
         'type' => 'text',
         'label' => "Image",
-
-      ]);
-     
-
+        'attributes' => [
+          'placeholder' => 'Enter Name',
+          'class' => 'form-control col-md-6',
+          'readonly'=>'',
+          'disabled'=>'',
+        ] // change the HTML attributes of your input
+        ],[
+          'name'=>'created_at',
+          'type'=>'text',
+          'label'=>'create_at',
+          'attributes'=>[
+            'placeholder'=>'Enter type',
+            'class'=>'form-control col-md-12'
+          ]
+        ]);
 
       //$this->crud->addField();
 
-      $this->crud->addField([
-        'name'=>'created_at',
-        'type'=>'date',
-        'label'=>'create_at',
-      ]);
-
-      $this->crud->addField([
-        'name'=>'updated_at',
-        'type'=>'date',
-        'label'=>'updated_at',
-      ]);
+      // $this->crud->addField([
+      //   'name'=>'updated_at',
+      //   'type'=>'date',
+      //   'label'=>'updated_at',
+      // ]);
 
 
   }
