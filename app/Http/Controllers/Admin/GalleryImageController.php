@@ -63,7 +63,7 @@ class GalleryImageController extends CrudController {
         'allows_null' => false,
         'allows_multiple' => true,
 
-      ],);
+      ]);
       $this->crud->addField([
         'tab' => 'Gallery Detail',
         'name' => 'field2',
