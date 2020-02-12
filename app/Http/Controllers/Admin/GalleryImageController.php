@@ -52,32 +52,29 @@ class GalleryImageController extends CrudController {
 
       //$this->crud->setValidation(TagCrudRequest::class);
 // select_from_array
-      $fields =[
-        [
-          'tab' => 'Gallery',
-          'name' => 'field1',
-          'label' => "Field 1",
-          'type' => 'select_from_array',
-          'options' =>[
+      $this->crud->addField( [
+        'tab' => 'Gallery',
+        'name' => 'field1',
+        'label' => "Field 1",
+        'type' => 'select_from_array',
+        'options' =>[
 
-          ],
-          'allows_null' => false,
-          'allows_multiple' => true,
-  
-        ],[
-          'tab' => 'Gallery Detail',
-          'name' => 'field2',
-          'label' => "field 2",
-          'type' => 'select_from_array',
-          'options' =>[],
-          'allows_null' => false,
-          'allows_multiple' => true,          
-        ]
+        ],
+        'allows_null' => false,
+        'allows_multiple' => true,
 
-      ];
-      $this->crud->addFields($fields);
+      ],);
+      $this->crud->addField([
+        'tab' => 'Gallery Detail',
+        'name' => 'field2',
+        'label' => "field 2",
+        'type' => 'select_from_array',
+        'options' =>[],
+        'allows_null' => false,
+        'allows_multiple' => true,          
+      ]);
      
-
+    
       // $this->crud->addField([
       //   'name' => 'gallery_name',
       //   'type' => 'text',
