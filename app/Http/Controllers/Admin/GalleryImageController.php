@@ -58,6 +58,9 @@ class GalleryImageController extends CrudController {
           'name' => 'field1',
           'label' => "Field 1",
           'type' => 'select_from_array',
+          'options' =>[
+
+          ],
           'allows_null' => false,
           'allows_multiple' => true,
   
@@ -66,6 +69,7 @@ class GalleryImageController extends CrudController {
           'name' => 'field2',
           'label' => "field 2",
           'type' => 'select_from_array',
+          'options' =>[],
           'allows_null' => false,
           'allows_multiple' => true,          
         ]
