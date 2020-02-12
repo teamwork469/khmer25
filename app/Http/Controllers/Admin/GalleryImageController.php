@@ -69,7 +69,7 @@ class GalleryImageController extends CrudController {
       //   'label'=>'updated_at',
       // ]);
 
-      $this->crud->adddField([   // Address
+      $this->crud->addField([   // Address
         'name' => 'address',
         'label' => 'Address',
         'type' => 'address_algolia',
