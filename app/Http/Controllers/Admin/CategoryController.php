@@ -112,7 +112,7 @@ class CategoryController extends CrudController {
         'name' => 'main_category_name',
         'label' => "Category",
         'type' => 'select_and_order',
-        'options' => MainCategory::get()->pluck('main_category_name','main_category_id')->toArray(),
+        'options' => Category::get()->pluck('category_name','category_id')->toArray(),
     ]);
 
  
