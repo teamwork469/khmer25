@@ -107,6 +107,8 @@ class CategoryController extends CrudController {
         'type' => 'date',
         'label' => "Update Date"
       ]);
+
+ 
  
   }
 
