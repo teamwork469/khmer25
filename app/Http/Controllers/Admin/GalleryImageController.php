@@ -117,6 +117,21 @@ $this->crud->addField([
 ]);
 
 
+$this->crud->addField([   // radio
+  'name'        => 'status', // the name of the db column
+  'label'       => 'Status', // the input label
+  'type'        => 'radio',
+  'options'     => [
+      // the key will be stored in the db, the value will be shown as label; 
+      0 => "Draft",
+      1 => "Published",
+      2 => "Private"
+  ],
+  // optional
+  //'inline'      => false, // show the radios all on the same line?
+]);
+
+
 
 $this->crud->addField([   // Color
   'name' => 'background_color',
