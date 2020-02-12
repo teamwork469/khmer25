@@ -49,45 +49,56 @@ class GalleryImageController extends CrudController {
 
   public function setupCreateOperation()
   {
+    $this->crud->enableTabs();
+    $this->crud->enableHorizontalTabs();
       //$this->crud->setValidation(TagCrudRequest::class);
 // select_from_array
-      // $this->crud->addField([
-      //   'name' => 'select_from_array',
-      //   'label' => "Select from array",
-      //   'type' => 'select_from_array',
-      //   'options' =>['sd'],
-      //   'allows_null' => false,
-      //   'allows_multiple' => true,
-      //   'tab' => 'Tab name here',
-      // ]);
+      $this->crud->addField([
+        'name' => 'select_from_array',
+        'label' => "Select from array",
+        'type' => 'select_from_array',
+        'options' =>['sd'],
+        'allows_null' => false,
+        'allows_multiple' => true,
+        'tab' => 'Tab name here',
+      ]);
      
 
-      $this->crud->addField([
-        'name' => 'gallery_name',
-        'type' => 'text',
-        'label' => "Image",
-        'attributes' => [
-          'placeholder' => 'Enter Name',
-          'class' => 'form-control col-md-6',
-          'readonly'=>'',
-          'disabled'=>'',
-        ] // change the HTML attributes of your input
-        ],[
-          'name'=>'created_at',
-          'type'=>'text',
-          'label'=>'create_at',
-          'attributes'=>[
-            'placeholder'=>'Enter type',
-            'class'=>'form-control col-md-12'
-          ]
-        ]);
+      // $this->crud->addField([
+      //   'name' => 'gallery_name',
+      //   'type' => 'text',
+      //   'label' => "Image",
+      //   'attributes' => [
+      //     'placeholder' => 'Enter Name',
 
-      //$this->crud->addField();
+      //   ],
+      //   'wrapperAttributes' => [
+      //     'class' => 'form-group col-md-4'
+      //   ]  // change the HTML attributes of your input
+      //   ],);
+
+      // $this->crud->addField([
+      //   'name'=>'created_at',
+      //   'type'=>'text',
+      //   'label'=>'create_at',
+      //   'attributes'=>[
+      //     'placeholder'=>'Enter type',
+      //   ],
+      //   'wrapperAttributes' => [
+      //     'class' => 'form-group col-md-4'
+      //   ] 
+      // ]);
 
       // $this->crud->addField([
       //   'name'=>'updated_at',
       //   'type'=>'date',
       //   'label'=>'updated_at',
+      //   'attributes'=>[
+      //     'placeholder'=>'Enter type',
+      //   ],
+      //   'wrapperAttributes' => [
+      //     'class' => 'form-group col-md-4'
+      //   ] 
       // ]);
 
 
