@@ -53,15 +53,25 @@ class GalleryImageController extends CrudController {
     $this->crud->enableHorizontalTabs();
       //$this->crud->setValidation(TagCrudRequest::class);
 // select_from_array
-      $this->crud->addField([
+      $tab1=[
         'name' => 'select_from_array',
-        'label' => "Select from array",
+        'label' => "Tabs",
         'type' => 'select_from_array',
         'options' =>['sd'],
         'allows_null' => false,
         'allows_multiple' => true,
-        'tab' => 'Tab name here',
-      ]);
+        'tab' => 'Tab1',
+      ];
+      $tab2=[
+        'name' => 'select_from_array',
+        'label' => "Tabs",
+        'type' => 'select_from_array',
+        'options' =>['sd'],
+        'allows_null' => false,
+        'allows_multiple' => true,
+        'tab' => 'Tab1',
+      ];
+      $this->crud->addField($tab1,$tab2);
      
 
       // $this->crud->addField([
