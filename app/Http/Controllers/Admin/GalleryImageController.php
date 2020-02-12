@@ -76,6 +76,18 @@ class GalleryImageController extends CrudController {
         // optional
         'store_as_json' => true
     ]);
+    // select_from_array
+$this->crud->addField([
+  'name' => 'select_from_array',
+  'label' => "Select from array",
+  'type' => 'select_from_array',
+  'options' => ['one' => 'One', 'two' => 'Two', 'three' => 'Three'],
+  'allows_null' => false,
+  'allows_multiple' => true,
+  'tab' => 'Tab name here',
+
+  
+]);
 
   }
 
