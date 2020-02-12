@@ -21,6 +21,7 @@ class GalleryImageController extends CrudController {
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
       //$this->crud->enableBulkActions();
+      $this->crud->enableDetailsRow();
   }
 
   public function setupListOperation()
@@ -40,6 +41,8 @@ class GalleryImageController extends CrudController {
       'label' => "updated_at", // Table column heading
       'type' => 'Text'
     ]);
+
+    $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
 
   
   }
