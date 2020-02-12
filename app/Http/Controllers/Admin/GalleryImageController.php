@@ -66,33 +66,17 @@ class GalleryImageController extends CrudController {
         'name' => 'gallery_name',
         'type' => 'text',
         'label' => "Image",
-        'attributes' => [
-          'placeholder' => 'Enter Name',
 
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-4'
-        ],
         ///field create__at
         'name'=>'created_at',
         'type'=>'text',
         'label'=>'create_at',
-        'attributes'=>[
-          'placeholder'=>'Enter type',
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-4'
-        ],
+
         ////update_at
         'name'=>'updated_at',
         'type'=>'date',
         'label'=>'updated_at',
-        'attributes'=>[
-          'placeholder'=>'Enter type',
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-4'
-        ]
+
   ]);
   /////Tab gallery detail
       $this->crud->addField([
@@ -103,19 +87,6 @@ class GalleryImageController extends CrudController {
         'options' =>[],
         'allows_null' => false,
         'allows_multiple' => true,
-
-
-        ////update_at
-        'name'=>'updated_at',
-        'type'=>'date',
-        'label'=>'updated_at',
-        'attributes'=>[
-          'placeholder'=>'Enter type',
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-4'
-        ]
-
       ]);
   }
 
