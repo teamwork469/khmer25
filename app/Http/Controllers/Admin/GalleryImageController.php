@@ -32,12 +32,12 @@ class GalleryImageController extends CrudController {
     ]);
     $this->crud->addColumn([
       'name' => 'created_at', // The db column name
-      'label' => "Image", // Table column heading
+      'label' => "created_at", // Table column heading
       'type' => 'Text'
     ]);
     $this->crud->addColumn([
       'name' => 'updated_at', // The db column name
-      'label' => "Image", // Table column heading
+      'label' => "updated_at", // Table column heading
       'type' => 'Text'
     ]);
 
@@ -48,14 +48,19 @@ class GalleryImageController extends CrudController {
   {
       //$this->crud->setValidation(TagCrudRequest::class);
 
-    //   $this->crud->addField([
-    //     'name' => 'category_name',
-    //     'type' => 'text',
-    //     'label' => "Category",
-    //   ]);
+      $this->crud->addField([
+        'name' => 'gallery_name',
+        'type' => 'text',
+        'label' => "Image",
+      ]);
 
-      
- 
+      $this->crud->addField([
+        'create_at'=>'create_at',
+        'type'=>'text',
+        'label'=>'create_at',
+        'update_at'=>'update_at',
+      ]);
+
   }
 
   public function setupUpdateOperation()
