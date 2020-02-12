@@ -65,50 +65,56 @@ class CategoryController extends CrudController {
   {
       //$this->crud->setValidation(TagCrudRequest::class);
 
-      $this->crud->addField([
-        'name' => 'category_name',
-        'type' => 'text',
-        'label' => "Category",
-      ]);
-
-      $this->crud->addField([  // Select
-        'label' => "Main Category",
-        'type' => 'select2',
-        'name' => 'main_category_id', // the db column for the foreign key
-        'entity' => 'main_category', // the method that defines the relationship in your Model
-        'attribute' => 'main_category_name', // foreign key attribute that is shown to user
-        'model' => "App\Models\MainCategory",
-     
-        // optional
-        'options'   => (function ($query) {
-             return $query->orderBy('main_category_id', 'ASC')->get();
-         }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
-        ]);
-
-      //   $this->crud->addField([
-      //     'name' => 'photos',
-      //     'label' => 'Photos',
-      //     'type' => 'upload_multiple',
-      //     // 'disk' => 'public', // filesystem disk if you're using S3 or something custom
+      // $this->crud->addField([
+      //   'name' => 'category_name',
+      //   'type' => 'text',
+      //   'label' => "Category",
       // ]);
 
-      $this->crud->addField([
-        'name' => 'description',
-        'type' => 'textarea',
-        'label' => "Description"
-      ]);
-      $this->crud->addField([
-        'name' => 'created_at',
-        'type' => 'date',
-        'label' => "Record Date"
-      ]);
-      $this->crud->addField([
-        'name' => 'updated_at',
-        'type' => 'date',
-        'label' => "Update Date"
-      ]);
+      // $this->crud->addField([  // Select
+      //   'label' => "Main Category",
+      //   'type' => 'select2',
+      //   'name' => 'main_category_id', // the db column for the foreign key
+      //   'entity' => 'main_category', // the method that defines the relationship in your Model
+      //   'attribute' => 'main_category_name', // foreign key attribute that is shown to user
+      //   'model' => "App\Models\MainCategory",
+     
+      //   // optional
+      //   'options'   => (function ($query) {
+      //        return $query->orderBy('main_category_id', 'ASC')->get();
+      //    }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
+      //   ]);
 
- 
+      // //   $this->crud->addField([
+      // //     'name' => 'photos',
+      // //     'label' => 'Photos',
+      // //     'type' => 'upload_multiple',
+      // //     // 'disk' => 'public', // filesystem disk if you're using S3 or something custom
+      // // ]);
+
+      // $this->crud->addField([
+      //   'name' => 'description',
+      //   'type' => 'textarea',
+      //   'label' => "Description"
+      // ]);
+      // $this->crud->addField([
+      //   'name' => 'created_at',
+      //   'type' => 'date',
+      //   'label' => "Record Date"
+      // ]);
+      // $this->crud->addField([
+      //   'name' => 'updated_at',
+      //   'type' => 'date',
+      //   'label' => "Update Date"
+      // ]);
+
+      $this->crud->addField([   // select_and_order
+        'name' => 'main_category_name',
+        'label' => "Category",
+        'type' => 'select_and_order',
+        'options' => MainCategory::get()->pluck('main_category_name','main_category_id')->toArray(),
+    ]);
+
  
   }
 
