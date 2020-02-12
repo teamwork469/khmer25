@@ -40,7 +40,7 @@ class Category extends Model {
   */
     public function main_category()
     {
-      return $this->hasOne('App\Models\MainCategory','main_category_id');
+      return $this->belongsTo('App\Models\MainCategory','main_category_id');
     }
 
   /*
