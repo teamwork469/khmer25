@@ -56,13 +56,13 @@ class GalleryImageController extends CrudController {
 
       $this->crud->addField([
         'name'=>'created_at',
-        'type'=>'text',
+        'type'=>'date',
         'label'=>'create_at',
       ]);
 
       $this->crud->addField([
         'name'=>'updated_at',
-        'type'=>'text',
+        'type'=>'date',
         'label'=>'updated_at',
       ]);
 
