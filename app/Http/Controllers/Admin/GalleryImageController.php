@@ -69,12 +69,10 @@ class GalleryImageController extends CrudController {
 
         'attributes' => [
           'placeholder' => 'Some text when empty',
-          'class' => 'form-control some-class',
         ],
         'wrapperAttributes' => [
           'class' => 'form-group col-md-12'
         ],
-
 
         ///field create__at
         'name'=>'created_at',
@@ -83,14 +81,10 @@ class GalleryImageController extends CrudController {
 
         'attributes' => [
           'placeholder' => 'Some text when empty',
-          'class' => 'form-control some-class',
         ], 
         'wrapperAttributes' => [
           'class' => 'form-group col-md-12'
         ],
-
-
-
   ]);
   /////Tab gallery detail
       $this->crud->addField([
