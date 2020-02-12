@@ -25,11 +25,26 @@ class GalleryImageController extends CrudController {
 
   public function setupListOperation()
   {
-    // $this->crud->addColumn([
-    //   'name' => 'category_name', // The db column name
-    //   'label' => "Category", // Table column heading
-    //   'type' => 'Text'
-    // ]);
+    $this->crud->addColumn([
+      'name' => 'gallery_name', // The db column name
+      'label' => "Image", // Table column heading
+      'type' => 'Text'
+    ]);
+    $this->crud->addColumn([
+      'name' => 'gallery_name', // The db column name
+      'label' => "Image", // Table column heading
+      'type' => 'Text'
+    ]);
+    $this->crud->addColumn([
+      'name' => 'gallery_name', // The db column name
+      'label' => "Image", // Table column heading
+      'type' => 'Text'
+    ]);
+    $this->crud->addColumn([
+      'name' => 'gallery_name', // The db column name
+      'label' => "Image", // Table column heading
+      'type' => 'Text'
+    ]);
   
   }
 
