@@ -51,7 +51,7 @@ class GalleryImageController extends CrudController {
   {
 
       //$this->crud->setValidation(TagCrudRequest::class);
-// select_from_array
+// tab gallery
       $this->crud->addField( [
         'tab' => 'Gallery',
         'name' => 'field1',
@@ -62,22 +62,7 @@ class GalleryImageController extends CrudController {
         'allows_null' => false,
         'allows_multiple' => true,
 
-      ]);
-      $this->crud->addField([
-        'tab' => 'Gallery Detail',
-        'name' => 'field2',
-        'label' => "field 2",
-        'type' => 'select_from_array',
-        'options' =>[],
-        'allows_null' => false,
-        'allows_multiple' => true,
-        
-
-      
-      ]);
-     
-    
-      $this->crud->addField([
+        ////Field gallery Name
         'name' => 'gallery_name',
         'type' => 'text',
         'label' => "Image",
@@ -87,10 +72,8 @@ class GalleryImageController extends CrudController {
         ],
         'wrapperAttributes' => [
           'class' => 'form-group col-md-4'
-        ]  // change the HTML attributes of your input
-        ]);
-
-      $this->crud->addField([
+        ],
+        ///field create__at
         'name'=>'created_at',
         'type'=>'text',
         'label'=>'create_at',
@@ -99,10 +82,8 @@ class GalleryImageController extends CrudController {
         ],
         'wrapperAttributes' => [
           'class' => 'form-group col-md-4'
-        ] 
-      ]);
-
-      $this->crud->addField([
+        ],
+        ////update_at
         'name'=>'updated_at',
         'type'=>'date',
         'label'=>'updated_at',
@@ -111,7 +92,30 @@ class GalleryImageController extends CrudController {
         ],
         'wrapperAttributes' => [
           'class' => 'form-group col-md-4'
-        ] 
+        ]
+  ]);
+  /////Tab gallery detail
+      $this->crud->addField([
+        'tab' => 'Gallery Detail',
+        'name' => 'field2',
+        'label' => "field 2",
+        'type' => 'select_from_array',
+        'options' =>[],
+        'allows_null' => false,
+        'allows_multiple' => true,
+
+
+        ////update_at
+        'name'=>'updated_at',
+        'type'=>'date',
+        'label'=>'updated_at',
+        'attributes'=>[
+          'placeholder'=>'Enter type',
+        ],
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-4'
+        ]
+
       ]);
   }
 
