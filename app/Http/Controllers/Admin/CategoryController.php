@@ -108,7 +108,7 @@ class CategoryController extends CrudController {
       //   'label' => "Update Date"
       // ]);
 
- 
+
   }
 
   public function setupUpdateOperation()
