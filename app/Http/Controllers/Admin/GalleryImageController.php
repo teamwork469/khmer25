@@ -42,7 +42,7 @@ class GalleryImageController extends CrudController {
       'type' => 'Text'
     ]);
 
-    $this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
+    //$this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
 
   
   }
