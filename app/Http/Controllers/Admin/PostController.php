@@ -37,6 +37,7 @@ class PostController extends CrudController {
   public function setupCreateOperation()
   {
       //$this->crud->setValidation(TagCrudRequest::class);
+
       $fields1  = [
         [  // Select
           'tab'=>'Post',
@@ -99,7 +100,12 @@ class PostController extends CrudController {
      $custom =  [   // CustomHTML
         'name' => 'separator',
         'type' => 'custom_html',
-        'value' => ''
+        'value' => 
+        '<form>
+             <input class="form-control" type="text" placeholder="Enter Text something">
+             <input class="form-control" type="text" placeholder="Enter Text something">
+             <input class="form-control" type="text" placeholder="Enter Text something">
+        </form>'
       ];
 
       $this->crud->addField($custom);
