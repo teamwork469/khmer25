@@ -22,7 +22,7 @@ class Post extends Model {
   // public $timestamps = false;
   protected $guarded = ['post_id'];
 
-  protected $fillable = ['post_name','created_at','updated_at'];
+  protected $fillable = ['category_id','title','image','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
