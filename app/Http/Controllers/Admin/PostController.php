@@ -35,6 +35,7 @@ class PostController extends CrudController {
   public function setupCreateOperation()
   {
       //$this->crud->setValidation(TagCrudRequest::class);
+      $this->crud->setFromDb();
       $fields1  = [
         [  // Select
           'tab'=>'Post',
