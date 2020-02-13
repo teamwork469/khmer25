@@ -113,15 +113,8 @@ class PostController extends CrudController {
               <input class="form-control" type="text" placeholder="Enter Text something">
             <div>
         </form>
-        <button onclick="msg()" class="btn btn-primary">Alert</button>
-        <script>
-              $(document).ready(function(e){
-                 e.preventDefault();
-                  function msg(){
-                    alert("Hello World.");
-                  }
-              });
-        </script>
+        <button  class="btn btn-primary">Alert</button>
+
         '
       ];
 
