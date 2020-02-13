@@ -14,9 +14,9 @@ class GalleryDetailController extends CrudController {
 
   public function setup() 
   {
-      $this->crud->setModel("App\Models\Gallery");
-      $this->crud->setRoute("admin/gallery");
-      $this->crud->setEntityNameStrings('gallery', 'gallery');
+      $this->crud->setModel("App\Models\GalleryDetail");
+      $this->crud->setRoute("admin/gallerydetail");
+      $this->crud->setEntityNameStrings('Gallery Detail', 'Gallery Detail');
 
 
       $this->crud->enableExportButtons();
