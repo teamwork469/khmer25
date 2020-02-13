@@ -15,4 +15,6 @@ Route::group([
     Route::crud('maincategory', 'MainCategoryController');
     Route::crud('gallery', 'GalleryImageController');
     Route::crud('post', 'PostController');
+    Route::crud('gallerydetail', 'GalleryDetailController');
+    
 }); // this should be the absolute last line of this file
