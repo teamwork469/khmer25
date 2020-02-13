@@ -27,21 +27,26 @@ class GalleryDetailController extends CrudController {
 
   public function setupListOperation()
   {
-    $this->crud->addColumn([
-      'name' => 'gallery_name', // The db column name
-      'label' => "Image", // Table column heading
-      'type' => 'Text'
-    ]);
-    $this->crud->addColumn([
-      'name' => 'created_at', // The db column name
-      'label' => "created_at", // Table column heading
-      'type' => 'Text'
-    ]);
-    $this->crud->addColumn([
-      'name' => 'updated_at', // The db column name
-      'label' => "updated_at", // Table column heading
-      'type' => 'Text'
-    ]);
+      $columns = [
+        [
+            'name' => 'gallery_name', // The db column name
+            'label' => "Image", // Table column heading
+            'type' => 'Text'
+        ],
+        [
+            'name' => 'created_at', // The db column name
+            'label' => "created_at", // Table column heading
+            'type' => 'Text'
+        ],
+        [
+            'name' => 'updated_at', // The db column name
+            'label' => "updated_at", // Table column heading
+            'type' => 'Text'
+          ]
+
+      ];
+
+    $this->crud->addColumns();
   }
 
   public function setupCreateOperation()
