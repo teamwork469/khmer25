@@ -53,7 +53,7 @@ class PostController extends CrudController {
           [
             'tab'=>'Post',
             'name' => 'title',
-            'type' => 'text',
+            'type' => 'textarea',
             'label' => "Title",
 
             'attributes'=>[
@@ -62,14 +62,26 @@ class PostController extends CrudController {
           ],
           [
             'tab'=>'Post',
-            'label' => "Image",
+            'label' => "Upload Image",
             'name' => "image",
             'filename' => "image_filename", // set to null if not needed
             'type' => 'base64_image',
             'aspect_ratio' => 1, // set to 0 to allow any aspect ratio
             'crop' => true, // set to true to allow cropping, false to disable
             'src' => NULL, // null to read straight from DB, otherwise set to model accessor function
-        ]
+          ],
+          [
+            'tab'=>'Post',
+            'name' => 'created_at',
+            'type' => 'date',
+            'label' => "created_at",
+          ],
+          [
+            'tab'=>'Post',
+            'name' => 'updated_at',
+            'type' => 'date',
+            'label' => "updated_at",
+          ],
       ];
 
       $fields2 = [
