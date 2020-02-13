@@ -72,6 +72,10 @@ class MainCategoryController extends CrudController {
       ]);
   }
 
+  // public function create(){
+  //   return "Hello World!";
+  // }
+
   public function setupUpdateOperation()
   {
       $this->setupCreateOperation();
