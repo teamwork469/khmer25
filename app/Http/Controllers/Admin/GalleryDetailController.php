@@ -124,8 +124,7 @@ class GalleryDetailController extends CrudController {
               ],
             ]
   ];
-
-    $this->crud->addFields($fields1);
+  
     $this->crud->addFields($fields2);
   }
 
