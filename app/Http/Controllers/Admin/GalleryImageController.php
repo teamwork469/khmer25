@@ -76,7 +76,6 @@ class GalleryImageController extends CrudController {
           'type' => 'date'
         ],
 
-
     ];
 
     $fields2=[
