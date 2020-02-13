@@ -99,13 +99,13 @@ class PostController extends CrudController {
      $custom =  [   // CustomHTML
         'name' => 'separator',
         'type' => 'custom_html',
-        'value' => '<hr>'
+        'value' => ''
       ];
 
       $this->crud->addField($custom);
 
-      $this->crud->addFields($fields1);
-      $this->crud->addFields($fields2);
+      // $this->crud->addFields($fields1);
+      // $this->crud->addFields($fields2);
  
   }
  
