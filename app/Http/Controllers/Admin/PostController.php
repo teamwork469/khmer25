@@ -37,11 +37,11 @@ class PostController extends CrudController {
       //$this->crud->setValidation(TagCrudRequest::class);
       $fields  = [
         [  // Select
-          'label' => "Main Category",
+          'label' => "Category",
           'type' => 'select2',
-          'name' => 'main_category_id', // the db column for the foreign key
-          'entity' => 'main_category', // the method that defines the relationship in your Model
-          'attribute' => 'main_category', // foreign key attribute that is shown to user
+          'name' => 'category_id', // the db column for the foreign key
+          'entity' => 'category', // the method that defines the relationship in your Model
+          'attribute' => 'category_name', // foreign key attribute that is shown to user
           'model' => "App\Models\Category",
        
           // optional
