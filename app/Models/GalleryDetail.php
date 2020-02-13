@@ -32,7 +32,7 @@ class GalleryDetail extends Model {
   |--------------------------------------------------------------------------
   */
 public function gallery(){
-    return $this->belongTo('App\Models\Gallery','gallery_id');
+    return $this->belongsTo('App\Models\Gallery','gallery_id');
 }
 
   /*
