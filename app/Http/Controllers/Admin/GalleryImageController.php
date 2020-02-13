@@ -96,6 +96,7 @@ class GalleryImageController extends CrudController {
              }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
             ],
             [
+              'tab'=>'Gallery Detail',
               'label' => "Upload Image",
               'name' => "image",
               'type' => 'image',
