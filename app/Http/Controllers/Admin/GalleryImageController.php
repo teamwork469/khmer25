@@ -95,7 +95,8 @@ class GalleryImageController extends CrudController {
           ]
   ];
 
-    $this->crud->addFields($fields1,$fields2);
+    $this->crud->addFields($fields1);
+    $this->crud->addFields($fields2);
   }
 
   public function setupUpdateOperation()
