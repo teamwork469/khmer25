@@ -86,7 +86,7 @@ class GalleryImageController extends CrudController {
             'name' => 'gallery_id', // the db column for the foreign key
             'entity' => 'gallery', // the method that defines the relationship in your Model
             'attribute' => 'gallery_name', // foreign key attribute that is shown to user
-            'model' => "App\Models\Gallery",
+            'model' => "App\Models\GalleryDetail",
          
             // optional
             'options'   => (function ($query) {
