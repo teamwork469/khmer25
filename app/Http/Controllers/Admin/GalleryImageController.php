@@ -45,115 +45,57 @@ class GalleryImageController extends CrudController {
       'label' => "updated_at", // Table column heading
       'type' => 'Text'
     ]);
-
-    //$this->crud->addButtonFromModelFunction('line', 'open', 'getOpenButton', 'beginning');
-
-  
   }
 
   public function setupCreateOperation()
   {
 
     $fields1 = [
-      [
-        'tab'=>'Gallery',
-        'name' => 'gallery_name', // The db column name
-        'label' => "Image", // Table column heading
-        'type' => 'Text',
+        [
+          'tab'=>'Gallery',
+          'name' => 'gallery_name', // The db column name
+          'label' => "Image", // Table column heading
+          'type' => 'Text',
 
-        'attributes' => [
-          'placeholder' => 'Enter Name',
-          'autocomplete'=>'off',
+          'attributes' => [
+            'placeholder' => 'Enter Name',
+            'autocomplete'=>'off',
+          ],
+          'wrapperAttributes' => [
+            'class' => 'form-group col-md-12'
+          ],
         ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-12'
+        [
+          'tab'=>'Gallery',
+          'name' => 'created_at', // The db column name
+          'label' => "created_at", // Table column heading
+          'type' => 'date'
         ],
-      ],
-      [
-        'tab'=>'Gallery',
-        'name' => 'created_at', // The db column name
-        'label' => "created_at", // Table column heading
-        'type' => 'date'
-      ],
-      [
-        'tab'=>'Gallery',
-        'name' => 'updated_at', // The db column name
-        'label' => "updated_at", // Table column heading
-        'type' => 'date'
-      ],
+        [
+          'tab'=>'Gallery',
+          'name' => 'updated_at', // The db column name
+          'label' => "updated_at", // Table column heading
+          'type' => 'date'
+        ],
+
 
     ];
 
-    $fields2 = [
-        ////Field gallery Name
-        'name' => 'gallery_detail_name',
-        'type' => 'text',
-        'label' => "Image",
-        'tab'=>'Gallery Detail',
-        'attributes' => [
-          'placeholder' => 'Some text when empty',
-        ],
-        'wrapperAttributes' => [
-          'class' => 'form-group col-md-6'
-        ],
-    ];
-
-      //$this->crud->setValidation(TagCrudRequest::class);
-// tab gallery
-  //     $this->crud->addField( 
-  //       [
-  //       'tab' => 'Gallery',
-  //       'name' => 'field1',
-  //       'label' => "Field 1",
-  //       'type' => 'select_from_array',
-  //       'options' =>[],
-  //       'allows_null' => true,
-  //       'allows_multiple' => false,
-
-  //       ////Field gallery Name
-  //       'name' => 'gallery_name',
-  //       'type' => 'text',
-  //       'label' => "Image",
-  //       'attributes' => [
-  //         'placeholder' => 'Some text when empty',
-  //       ],
-  //       'wrapperAttributes' => [
-  //         'class' => 'form-group col-md-6'
-  //       ],
-
-  //       ///field create__at
-  //       'name'=>'created_at',
-  //       'type'=>'text',
-  //       'label'=>'create_at',
-  //       'attributes' => [
-  //         'placeholder' => 'Some text when empty',
-  //       ], 
-  //       'wrapperAttributes' => [
-  //         'class' => 'form-group col-md-6'
-  //       ],
-  // ]);
-  // /////Tab gallery detail
-  //     $this->crud->addField([
-  //       'tab' => 'Gallery Detail',
-  //       'name' => 'field2',
-  //       'label' => "field 2",
-  //       'type' => 'select_from_array',
-  //       'options' =>[],
-  //       'allows_null' => false,
-  //       'allows_multiple' => true,
-
-  //       ////update_at
-  //       'name'=>'updated_at',
-  //       'type'=>'date',
-  //       'label'=>'updated_at',
-
-  //       'attributes' => [
-  //         'placeholder' => 'Some text when empty',
-  //       ], 
-  //       'wrapperAttributes' => [
-  //         'class' => 'form-group col-md-6'
-  //       ]
-  //     ]);
+    $fields2=[
+        [
+          ////Field gallery Name
+          'tab'=>'Gallery Detail',
+          'name' => 'gallery_id',
+          'type' => 'text',
+          'label' => "Image",
+          'attributes' => [
+            'placeholder' => 'Some text when empty',
+          ],
+          'wrapperAttributes' => [
+            'class' => 'form-group col-md-6'
+          ],
+      ]
+  ];
 
     $this->crud->addFields($fields1);
     $this->crud->addFields($fields2);
