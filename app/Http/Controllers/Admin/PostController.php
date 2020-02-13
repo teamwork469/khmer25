@@ -102,19 +102,28 @@ class PostController extends CrudController {
         'type' => 'custom_html',
         'value' => 
         '<form>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Enter Text something">
-
-            <div>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Enter Text something">
-            <div>
-            <div class="form-group">
-              <input class="form-control" type="text" placeholder="Enter Text something">
-            <div>
-        </form>
-
-        '
+                <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Enter Text something">
+                      <div>
+                    </div>
+                </div>
+                <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Enter Text something">
+                  <div>
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <input class="form-control" type="text" placeholder="Enter Text something">
+              <div>
+            </div>
+        </div>
+        </form>'
       ];
 
       $this->crud->addField($custom);
