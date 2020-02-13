@@ -109,22 +109,38 @@ class GalleryDetailController extends CrudController {
               // 'prefix' => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
             ],
             [
-              'tab'=>'Gallery',
-              'name' => 'created_at', // The db column name
-              'label' => "created_at", // Table column heading
-              'type' => 'date',
-    
-              'attributes' => [
-                'placeholder' => 'Enter Name',
-                'autocomplete'=>'off',
-                'required'=>'true',
-              ],
-              'wrapperAttributes' => [
-                'class' => 'form-group col-md-12'
-              ],
-            ]
+                'tab'=>'Gallery Detail',
+                'name' => 'created_at', // The db column name
+                'label' => "created_at", // Table column heading
+                'type' => 'date',
+      
+                'attributes' => [
+                  'placeholder' => 'Enter Name',
+                  'autocomplete'=>'off',
+                  'required'=>'true',
+                ],
+                'wrapperAttributes' => [
+                  'class' => 'form-group col-md-12'
+                ],
+            ],
+            [
+                'tab'=>'Gallery Detail',
+                'name' => 'updated_at', // The db column name
+                'label' => "updated_at", // Table column heading
+                'type' => 'date',
+      
+                'attributes' => [
+                  'placeholder' => 'Enter Name',
+                  'autocomplete'=>'off',
+                  'required'=>'true',
+                ],
+                'wrapperAttributes' => [
+                  'class' => 'form-group col-md-12'
+                ],
+              ]
+
   ];
-  
+
     $this->crud->addFields($fields2);
   }
 
