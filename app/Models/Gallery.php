@@ -32,7 +32,9 @@ class Gallery extends Model {
   |--------------------------------------------------------------------------
   */
 
-
+  public function gallery(){
+    return $this->belongsToMany(GalleryDetail::class);
+}
   /*
   |--------------------------------------------------------------------------
   | RELATIONS
