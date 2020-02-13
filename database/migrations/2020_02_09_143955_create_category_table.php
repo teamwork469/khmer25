@@ -14,9 +14,8 @@ class CreateCategoryTable extends Migration
     public function up()
     {
         Schema::create('category', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('main_cat_id');
-            $table->foreign('main_cat_id')->references('id')->on('main_category')->onDelete('cascade');
+            $table->bigIncrements('category_id');
+            $table->integer('main_category_id');
             $table->string('name');
             $table->string('description');
             $table->timestamps();
