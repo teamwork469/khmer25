@@ -20,9 +20,6 @@ class GalleryDetailController extends CrudController {
 
 
       $this->crud->enableExportButtons();
-
-      $this->crud->enableDetailsRow();
-      $this->crud->getHeading('create');
  
       
       
