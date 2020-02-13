@@ -94,7 +94,22 @@ class GalleryImageController extends CrudController {
           'wrapperAttributes' => [
             'class' => 'form-group col-md-6'
           ],
-      ]
+        ],
+        [
+          [  // Select
+            'label' => "Gallery",
+            'type' => 'select2',
+            'name' => 'gallery_id', // the db column for the foreign key
+            'entity' => 'gallery', // the method that defines the relationship in your Model
+            'attribute' => 'gallery_name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Gallery",
+         
+            // optional
+            'options'   => (function ($query) {
+                 return $query->orderBy('gallery_name', 'ASC')->get();
+             }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
+         ]
+        ]
   ];
 
     $this->crud->addFields($fields1);
