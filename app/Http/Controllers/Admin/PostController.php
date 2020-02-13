@@ -11,8 +11,6 @@ class PostController extends CrudController {
   use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
   use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
 
-  use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation { store as traitStore; }
-
   public function setup() 
   {
       $this->crud->setModel("App\Models\Post");
