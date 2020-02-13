@@ -29,9 +29,12 @@ class GalleryDetailController extends CrudController {
   {
       $columns = [
         [
-            'name' => 'gallery_name', // The db column name
-            'label' => "Image", // Table column heading
-            'type' => 'Text'
+            'label' => "Name",
+            'type' => 'select',
+            'name' => 'gallery_id', // the db column for the foreign key
+            'entity' => 'gallery', // the method that defines the relationship in your Model
+            'attribute' => 'gallery_name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Gallery",
         ],
         [
             'name' => 'created_at', // The db column name
@@ -51,31 +54,6 @@ class GalleryDetailController extends CrudController {
 
   public function setupCreateOperation()
   {
-
-    $fields1 = [
-        [
-            'label' => "Name",
-            'type' => 'select2',
-            'name' => 'gallery_id', // the db column for the foreign key
-            'entity' => 'gallery', // the method that defines the relationship in your Model
-            'attribute' => 'gallery_name', // foreign key attribute that is shown to user
-            'model' => "App\Models\Gallery",
-
-        ],
-        [
-
-          'name' => 'created_at', // The db column name
-          'label' => "created_at", // Table column heading
-          'type' => 'date'
-        ],
-        [
-
-          'name' => 'updated_at', // The db column name
-          'label' => "updated_at", // Table column heading
-          'type' => 'date'
-        ],
-
-    ];
 
     $fields2=[
 
