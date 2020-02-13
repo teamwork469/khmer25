@@ -46,7 +46,7 @@ class GalleryDetailController extends CrudController {
 
       ];
 
-    $this->crud->addColumns();
+    $this->crud->addColumns($columns);
   }
 
   public function setupCreateOperation()
@@ -54,10 +54,13 @@ class GalleryDetailController extends CrudController {
 
     $fields1 = [
         [
-          'tab'=>'Gallery',
-          'name' => 'gallery_name', // The db column name
-          'label' => "Image", // Table column heading
-          'type' => 'Text',
+            'label' => "Name",
+            'type' => 'select2',
+            'tab'=>'Gallery Detail',
+            'name' => 'gallery_id', // the db column for the foreign key
+            'entity' => 'gallery', // the method that defines the relationship in your Model
+            'attribute' => 'gallery_name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Gallery",
 
           'attributes' => [
             'placeholder' => 'Enter Name',
