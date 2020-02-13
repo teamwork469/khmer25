@@ -113,7 +113,6 @@ class PostController extends CrudController {
               <input class="form-control" type="text" placeholder="Enter Text something">
             <div>
         </form>
-        <button  class="btn btn-primary">Alert</button>
 
         '
       ];
