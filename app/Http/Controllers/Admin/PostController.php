@@ -35,12 +35,25 @@ class PostController extends CrudController {
   public function setupCreateOperation()
   {
       //$this->crud->setValidation(TagCrudRequest::class);
+      $fields  = [
+        [
+          'name' => 'main_category_name',
+          'type' => 'text',
+          'label' => "Main Category"
+        ],
+        [
+          'name' => 'main_category_name',
+          'type' => 'text',
+          'label' => "Main Category"
+        ],
+        [
+          'name' => 'main_category_name',
+          'type' => 'text',
+          'label' => "Main Category"
+        ]
 
-    //   $this->crud->addField([
-    //     'name' => 'main_category_name',
-    //     'type' => 'text',
-    //     'label' => "Main Category"
-    //   ]);
+      ];
+ 
   }
 
   public function setupUpdateOperation()
