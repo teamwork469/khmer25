@@ -35,8 +35,9 @@ class PostController extends CrudController {
   public function setupCreateOperation()
   {
       //$this->crud->setValidation(TagCrudRequest::class);
-      $fields  = [
+      $fields1  = [
         [  // Select
+          'tab'=>'Post',
           'label' => "Category",
           'type' => 'select2',
           'name' => 'category_id', // the db column for the foreign key
@@ -50,6 +51,7 @@ class PostController extends CrudController {
            }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
           ],
         [
+          'tab'=>'Post',
           'name' => 'title',
           'type' => 'text',
           'label' => "Title",
@@ -58,17 +60,20 @@ class PostController extends CrudController {
               'placeholder' => 'Title',
           ]
         ],
+      ];
 
+      $fields2 = [
         [
-          'name' => 'main_category_name',
+          'tab'=>'Post Detail',
+          'name' => 'sds',
           'type' => 'text',
           'label' => "Main Category"
         ]
-
       ];
 
 
-      $this->crud->addFields($fields);
+      $this->crud->addFields($fields1);
+      $this->crud->addFields($fields2);
  
   }
 
