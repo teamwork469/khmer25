@@ -16,7 +16,7 @@ class CreateGalleryDetailTable extends Migration
         Schema::create('gallery_detail', function (Blueprint $table) {
             $table->bigIncrements('gallery_detail_id');
             $table->integer('gallery_id');
-            $table->string('image',255)->change();
+            $table->string('image',255);
             $table->timestamps();
         });
     }
