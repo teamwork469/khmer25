@@ -14,10 +14,9 @@ class CreateGalleryDetailTable extends Migration
     public function up()
     {
         Schema::create('gallery_detail', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('gal_id');
-            $table->foreign('gal_id')->references('id')->on('gallery')->onDelete('cascade');
-            $table->string('image');
+            $table->bigIncrements('gallery_detail_id');
+            $table->integer('gallery_id');
+            $table->string('image',255)->change();
             $table->timestamps();
         });
     }
