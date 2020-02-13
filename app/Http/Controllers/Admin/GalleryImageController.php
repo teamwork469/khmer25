@@ -26,10 +26,6 @@ class GalleryImageController extends CrudController {
 
   public function setupListOperation()
   {
-
-    
-
-
     $this->crud->addColumn([
       'name' => 'gallery_name', // The db column name
       'label' => "Image", // Table column heading
@@ -99,8 +95,7 @@ class GalleryImageController extends CrudController {
           ]
   ];
 
-    $this->crud->addFields($fields1);
-    $this->crud->addFields($fields2);
+    $this->crud->addFields($fields1,$fields2);
   }
 
   public function setupUpdateOperation()
