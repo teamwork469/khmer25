@@ -109,6 +109,7 @@ class PostController extends CrudController {
         <button onclick="msg()" class="btn btn-primary">Alert</button>
         <script>
               $(document).ready(function(e){
+                 e.preventDefault();
                   function msg(){
                     alert("Hello World.");
                   }
