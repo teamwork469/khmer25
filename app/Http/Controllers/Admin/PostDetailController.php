@@ -13,9 +13,9 @@ class PostDetailController extends CrudController {
 
   public function setup() 
   {
-      $this->crud->setModel("App\Models\Tag");
-      $this->crud->setRoute("admin/tag");
-      $this->crud->setEntityNameStrings('tag', 'tags');
+      $this->crud->setModel("App\Models\PostDetail");
+      $this->crud->setRoute("admin/postdetail");
+      $this->crud->setEntityNameStrings('Post Detail', 'Post Detail');
   }
 
   protected function setupListOperation()
