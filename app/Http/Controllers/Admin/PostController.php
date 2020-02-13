@@ -62,10 +62,14 @@ class PostController extends CrudController {
           ],
           [
             'tab'=>'Post',
-            'name' => 'image',
-            'type' => 'image',
-            'label' => "Main Image"
-          ]
+            'label' => "Image",
+            'name' => "image",
+            'filename' => "image_filename", // set to null if not needed
+            'type' => 'base64_image',
+            'aspect_ratio' => 1, // set to 0 to allow any aspect ratio
+            'crop' => true, // set to true to allow cropping, false to disable
+            'src' => NULL, // null to read straight from DB, otherwise set to model accessor function
+        ]
       ];
 
       $fields2 = [
