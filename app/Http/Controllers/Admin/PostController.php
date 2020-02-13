@@ -105,7 +105,16 @@ class PostController extends CrudController {
              <input class="form-control" type="text" placeholder="Enter Text something">
              <input class="form-control" type="text" placeholder="Enter Text something">
              <input class="form-control" type="text" placeholder="Enter Text something">
-        </form>'
+        </form>
+        <button onclick="msg()" class="btn btn-primary">Alert</button>
+        <script>
+              $(document).ready(function(e){
+                  function msg(){
+                    alert("Hello World.");
+                  }
+              });
+        </script>
+        '
       ];
 
       $this->crud->addField($custom);
