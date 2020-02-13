@@ -98,6 +98,7 @@ class PostController extends CrudController {
       $this->crud->addFields($fields2);
  
   }
+ 
 
   public function setupUpdateOperation()
   {
