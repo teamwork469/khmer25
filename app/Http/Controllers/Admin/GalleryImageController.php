@@ -94,7 +94,7 @@ class GalleryImageController extends CrudController {
          
             // optional
             'options'   => (function ($query) {
-                 return $query->orderBy('gallery_name', 'ASC')->get();
+                 return $query->orderBy('gallery_id', 'ASC')->get();
              }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
           ]
   ];
