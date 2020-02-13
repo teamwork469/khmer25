@@ -28,11 +28,11 @@ class MainCategory extends Model {
   | FUNCTIONS
   |--------------------------------------------------------------------------
   */
-  public function main_category()
-  {
+  // public function main_category()
+  // {
  
-    return $this->belongsToMany(Category::class);
-  }
+  //   return $this->belongsToMany(Category::class);
+  // }
   /*
   |--------------------------------------------------------------------------
   | RELATIONS
