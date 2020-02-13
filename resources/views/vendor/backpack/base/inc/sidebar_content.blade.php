@@ -15,6 +15,8 @@ Main Category</a></li>
 Category</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('gallery') }}"><i class="fa fa-picture-o" aria-hidden="true"></i>
 Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ backpack_url('gallerydetail') }}"><i class="fa fa-picture-o" aria-hidden="true"></i>
+Gallery Detail</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('post') }}"><i class="fa fa-suitcase" aria-hidden="true"></i>
 Post</a></li>
 <li class="nav-item"><a class="nav-link" href="{{ backpack_url('logout') }}"><i class="fa fa-sign-out" aria-hidden="true"></i>
