@@ -36,6 +36,11 @@ class GalleryDetailController extends CrudController {
             'model'     => "App\Models\Gallery",
         ],
         [
+          'name' => 'image', // The db column name
+          'label' => "Image", // Table column heading
+          'type' => 'Text'
+      ],
+        [
             'name' => 'created_at', // The db column name
             'label' => "created_at", // Table column heading
             'type' => 'Text'
