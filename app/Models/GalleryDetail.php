@@ -22,7 +22,7 @@ class GalleryDetail extends Model {
   // public $timestamps = false;
   protected $guarded = ['gallery_detail_id'];
 
-  protected $fillable = ['gallery_detail_name','created_at','updated_at'];
+  protected $fillable = ['gallery_id','gallery_detail_name','image','created_at','updated_at'];
   // protected $hidden = [];
   // protected $dates = [];
 
@@ -31,7 +31,9 @@ class GalleryDetail extends Model {
   | FUNCTIONS
   |--------------------------------------------------------------------------
   */
-
+public function gallery(){
+    return $this->belongTo('App\Models\Gallery','gallery_id');
+}
 
   /*
   |--------------------------------------------------------------------------
