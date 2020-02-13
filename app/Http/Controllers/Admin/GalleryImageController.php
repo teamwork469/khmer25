@@ -18,6 +18,7 @@ class GalleryImageController extends CrudController {
       $this->crud->setRoute("admin/gallery");
       $this->crud->setEntityNameStrings('gallery', 'gallery');
 
+
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
       //$this->crud->enableBulkActions();
