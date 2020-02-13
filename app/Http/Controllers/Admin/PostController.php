@@ -11,6 +11,8 @@ class PostController extends CrudController {
   use \Backpack\CRUD\app\Http\Controllers\Operations\UpdateOperation;
   use \Backpack\CRUD\app\Http\Controllers\Operations\DeleteOperation;
 
+  use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation { store as traitStore; }
+
   public function setup() 
   {
       $this->crud->setModel("App\Models\Post");
@@ -20,6 +22,8 @@ class PostController extends CrudController {
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
   }
+
+
 
   public function setupListOperation()
   {
@@ -35,7 +39,6 @@ class PostController extends CrudController {
   public function setupCreateOperation()
   {
       //$this->crud->setValidation(TagCrudRequest::class);
-      $this->crud->setFromDb();
       $fields1  = [
         [  // Select
           'tab'=>'Post',
