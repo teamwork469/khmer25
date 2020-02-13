@@ -54,7 +54,7 @@ class GalleryImageController extends CrudController {
   public function setupCreateOperation()
   {
 
-    $fields = [
+    $fields1 = [
       [
         'tab'=>'Gallery',
         'name' => 'gallery_name', // The db column name
@@ -81,13 +81,21 @@ class GalleryImageController extends CrudController {
         'label' => "updated_at", // Table column heading
         'type' => 'date'
       ],
-      [
-        'tab'=>'Gallery Detail',
-        'name' => 'sd', // The db column name
-        'label' => "updated_at", // Table column heading
-        'type' => 'date'
-      ],
 
+    ];
+
+    $fields2 = [
+        ////Field gallery Name
+        'name' => 'gallery_detail_name',
+        'type' => 'text',
+        'label' => "Image",
+        'tab'=>'Gallery Detail',
+        'attributes' => [
+          'placeholder' => 'Some text when empty',
+        ],
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-6'
+        ],
     ];
 
       //$this->crud->setValidation(TagCrudRequest::class);
@@ -147,7 +155,8 @@ class GalleryImageController extends CrudController {
   //       ]
   //     ]);
 
-    $this->crud->addFields($fields);
+    $this->crud->addFields($fields1);
+    $this->crud->addFields($fields2);
   }
 
   public function setupUpdateOperation()
