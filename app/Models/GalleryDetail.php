@@ -36,7 +36,7 @@ public function gallery(){
     return $this->belongsTo('App\Models\Gallery','gallery_id');
 }
 
-public function setImage($value){
+public function setImageAttribute($value){
     $attribute_name = 'image';
     $disk = config('backpack.base.root_disk_name');
     $destination_path = "public/uploads/.product";
