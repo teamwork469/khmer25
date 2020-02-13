@@ -14,11 +14,9 @@ class CreatePostDetailTable extends Migration
     public function up()
     {
         Schema::create('post_detail', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('post_detail_id');
             $table->integer('post_id');
-            $table->integer('gal_id');
-            $table->foreign('post_id')->references('id')->on('post')->onDelete('cascade');
-            $table->foreign('gal_id')->references('id')->on('gallery')->onDelete('cascade');
+            $table->integer('gallery_id');
             $table->string('description');
             $table->timestamps();
         });
