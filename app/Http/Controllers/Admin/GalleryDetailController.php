@@ -20,9 +20,7 @@ class GalleryDetailController extends CrudController {
 
 
       $this->crud->enableExportButtons();
- 
-      
-      
+  
   }
 
   public function setupListOperation()
@@ -30,12 +28,12 @@ class GalleryDetailController extends CrudController {
       $columns = [
         
         [
-            'label' => "Name",
-            'type' => 'select',
-            'name' => 'gallery_id', // the db column for the foreign key
-            'entity' => 'gallery', // the method that defines the relationship in your Model
+            'label'     => "Name",
+            'type'      => 'select',
+            'name'      => 'gallery_id', // the db column for the foreign key
+            'entity'    => 'gallery', // the method that defines the relationship in your Model
             'attribute' => 'gallery_name', // foreign key attribute that is shown to user
-            'model' => "App\Models\Gallery",
+            'model'     => "App\Models\Gallery",
         ],
         [
             'name' => 'created_at', // The db column name
