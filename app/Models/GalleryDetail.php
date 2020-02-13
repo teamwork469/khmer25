@@ -37,6 +37,8 @@ public function gallery(){
 
 public function setImage($value){
     $attribute_name = 'image';
+    $disk = config('backpack.base.root_disk_name');
+    $destination_path = "public/uploads/.product";
 }
 
   /*
