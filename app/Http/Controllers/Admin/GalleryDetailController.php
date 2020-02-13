@@ -35,6 +35,7 @@ class GalleryDetailController extends CrudController {
             'entity' => 'gallery', // the method that defines the relationship in your Model
             'attribute' => 'gallery_name', // foreign key attribute that is shown to user
             'model' => "App\Models\Gallery",
+            
         ],
         [
             'name' => 'created_at', // The db column name
