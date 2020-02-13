@@ -50,16 +50,22 @@ class PostController extends CrudController {
                return $query->orderBy('category_name', 'ASC')->get();
            }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
           ],
-        [
-          'tab'=>'Post',
-          'name' => 'title',
-          'type' => 'text',
-          'label' => "Title",
+          [
+            'tab'=>'Post',
+            'name' => 'title',
+            'type' => 'text',
+            'label' => "Title",
 
-          'attributes'=>[
-              'placeholder' => 'Title',
+            'attributes'=>[
+                'placeholder' => 'Title',
+            ]
+          ],
+          [
+            'tab'=>'Post',
+            'name' => 'image',
+            'type' => 'image',
+            'label' => "Main Image"
           ]
-        ],
       ];
 
       $fields2 = [
