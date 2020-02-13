@@ -63,7 +63,7 @@ class PostController extends CrudController {
       ];
 
 
-      $this->curd->addFields($fields);
+      $this->crud->addFields($fields);
  
   }
 
