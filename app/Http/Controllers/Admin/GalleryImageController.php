@@ -105,6 +105,21 @@ class GalleryImageController extends CrudController {
               'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
               // 'disk' => 's3_bucket', // in case you need to show images from a different disk
               // 'prefix' => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
+            ],
+            [
+              'tab'=>'Gallery',
+              'name' => 'created_at', // The db column name
+              'label' => "created_at", // Table column heading
+              'type' => 'date',
+    
+              'attributes' => [
+                'placeholder' => 'Enter Name',
+                'autocomplete'=>'off',
+                'required'=>'true',
+              ],
+              'wrapperAttributes' => [
+                'class' => 'form-group col-md-12'
+              ],
             ]
   ];
 
