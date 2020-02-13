@@ -22,6 +22,10 @@ class PostController extends CrudController {
   }
 
 
+  public function setup(){
+    return 'Hello';
+  }
+
 
   public function setupListOperation()
   {
