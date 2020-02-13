@@ -36,11 +36,19 @@ class PostController extends CrudController {
   {
       //$this->crud->setValidation(TagCrudRequest::class);
       $fields  = [
-        [
-          'name' => 'main_category_name',
-          'type' => 'text',
-          'label' => "Main Category"
-        ],
+        [  // Select
+          'label' => "Main Category",
+          'type' => 'select2',
+          'name' => 'main_category_id', // the db column for the foreign key
+          'entity' => 'main_category', // the method that defines the relationship in your Model
+          'attribute' => 'main_category', // foreign key attribute that is shown to user
+          'model' => "App\Models\Category",
+       
+          // optional
+          'options'   => (function ($query) {
+               return $query->orderBy('category_name', 'ASC')->get();
+           }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
+          ],
         [
           'name' => 'main_category_name',
           'type' => 'text',
@@ -53,6 +61,9 @@ class PostController extends CrudController {
         ]
 
       ];
+
+
+      $this->curd->addFields($fields);
  
   }
 
