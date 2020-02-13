@@ -50,10 +50,15 @@ class PostController extends CrudController {
            }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
           ],
         [
-          'name' => 'main_category_name',
+          'name' => 'title',
           'type' => 'text',
-          'label' => "Main Category"
+          'label' => "Title",
+
+          'attributes'=>[
+              'placeholder' => 'Title',
+          ]
         ],
+
         [
           'name' => 'main_category_name',
           'type' => 'text',
