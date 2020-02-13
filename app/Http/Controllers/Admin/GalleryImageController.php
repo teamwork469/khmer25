@@ -59,7 +59,14 @@ class GalleryImageController extends CrudController {
         'tab'=>'Gallery',
         'name' => 'gallery_name', // The db column name
         'label' => "Image", // Table column heading
-        'type' => 'Text'
+        'type' => 'Text',
+
+        'attributes' => [
+          'placeholder' => 'Enter Name',
+        ],
+        'wrapperAttributes' => [
+          'class' => 'form-group col-md-6'
+        ],
       ],
       [
         'tab'=>'Gallery',
