@@ -56,29 +56,20 @@ class GalleryDetailController extends CrudController {
         [
             'label' => "Name",
             'type' => 'select2',
-            'tab'=>'Gallery Detail',
             'name' => 'gallery_id', // the db column for the foreign key
             'entity' => 'gallery', // the method that defines the relationship in your Model
             'attribute' => 'gallery_name', // foreign key attribute that is shown to user
             'model' => "App\Models\Gallery",
 
-          'attributes' => [
-            'placeholder' => 'Enter Name',
-            'autocomplete'=>'off',
-            'required'=>'true',
-          ],
-          'wrapperAttributes' => [
-            'class' => 'form-group col-md-12'
-          ],
         ],
         [
-          'tab'=>'Gallery',
+
           'name' => 'created_at', // The db column name
           'label' => "created_at", // Table column heading
           'type' => 'date'
         ],
         [
-          'tab'=>'Gallery',
+
           'name' => 'updated_at', // The db column name
           'label' => "updated_at", // Table column heading
           'type' => 'date'
