@@ -102,9 +102,16 @@ class PostController extends CrudController {
         'type' => 'custom_html',
         'value' => 
         '<form>
-             <input class="form-control" type="text" placeholder="Enter Text something">
-             <input class="form-control" type="text" placeholder="Enter Text something">
-             <input class="form-control" type="text" placeholder="Enter Text something">
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Enter Text something">
+
+            <div>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Enter Text something">
+            <div>
+            <div class="form-group">
+              <input class="form-control" type="text" placeholder="Enter Text something">
+            <div>
         </form>
         <button onclick="msg()" class="btn btn-primary">Alert</button>
         <script>
