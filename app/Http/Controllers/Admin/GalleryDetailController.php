@@ -74,14 +74,13 @@ class GalleryDetailController extends CrudController {
             ],
             [
               'tab'=>'Gallery Detail',
-              'label' => "Upload Image",
+              'label' => "Image",
               'name' => "image",
-              'type' => 'image',
-              'upload' => true,
+              'filename' => "image_filename", // set to null if not needed
+              'type' => 'base64_image',
+              'aspect_ratio' => 1, // set to 0 to allow any aspect ratio
               'crop' => true, // set to true to allow cropping, false to disable
-              'aspect_ratio' => 1, // ommit or set to 0 to allow any aspect ratio
-              // 'disk' => 's3_bucket', // in case you need to show images from a different disk
-              // 'prefix' => 'uploads/images/profile_pictures/' // in case your db value is only the file name (no path), you can use this to prepend your path to the image src (in HTML), before it's shown to the user;
+              'src' => NULL, // null to read straight from DB, otherwise set to model accessor function
             ],
             [
                 'tab'=>'Gallery Detail',
