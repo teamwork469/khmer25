@@ -35,6 +35,10 @@ public function gallery(){
     return $this->belongsTo('App\Models\Gallery','gallery_id');
 }
 
+public function setImage($value){
+    $attribute_name = 'image';
+}
+
   /*
   |--------------------------------------------------------------------------
   | RELATIONS
