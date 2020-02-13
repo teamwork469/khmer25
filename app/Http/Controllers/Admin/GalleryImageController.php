@@ -63,9 +63,10 @@ class GalleryImageController extends CrudController {
 
         'attributes' => [
           'placeholder' => 'Enter Name',
+          'autocomplete'=>'off',
         ],
         'wrapperAttributes' => [
-          'class' => 'form-group col-md-6'
+          'class' => 'form-group col-md-12'
         ],
       ],
       [
