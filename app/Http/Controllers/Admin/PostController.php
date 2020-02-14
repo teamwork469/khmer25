@@ -119,7 +119,7 @@ class PostController extends CrudController {
             <div class="row">
             <div class="col-md-12">
               <div class="form-group">
-                <input class="form-control" type="text" placeholder="Enter Text something">
+                <input class="form-control" type="date" placeholder="Enter Text something">
               <div>
             </div>
         </div>
