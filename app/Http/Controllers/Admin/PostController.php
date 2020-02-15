@@ -123,7 +123,11 @@ class PostController extends CrudController {
               <div>
             </div>
         </div>
-        </form>'
+        </form>
+        <script>
+              $(document).ready(function()); 
+        </script>
+        '
       ];
 
       $this->crud->addField($custom);
