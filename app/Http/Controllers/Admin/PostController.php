@@ -41,20 +41,6 @@ class PostController extends CrudController {
       //$this->crud->setValidation(TagCrudRequest::class);
 
       $fields1  = [
-        [  // Select
-          'tab'=>'Post',
-          'label' => "Category",
-          'type' => 'select2',
-          'name' => 'category_id', // the db column for the foreign key
-          'entity' => 'category', // the method that defines the relationship in your Model
-          'attribute' => 'category_name', // foreign key attribute that is shown to user
-          'model' => "App\Models\Category",
-       
-          // optional
-          'options'   => (function ($query) {
-               return $query->orderBy('category_name', 'ASC')->get();
-           }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
-          ],
           [
             'tab'=>'Post',
             'name' => 'title',
@@ -63,6 +49,17 @@ class PostController extends CrudController {
 
             'attributes'=>[
                 'placeholder' => 'Title',
+            ]
+          ],
+          [
+            'tab'=>'Post',
+            'name' => 'price',
+            'type' => 'number',
+            'label' => "Price",
+
+            'attributes'=>[
+                'placeholder' => 'Price',
+                'required' => 'true',
             ]
           ],
           [
@@ -90,12 +87,34 @@ class PostController extends CrudController {
       ];
 
       $fields2 = [
-        [
+        [  // Select
           'tab'=>'Post Detail',
-          'name' => 'sds',
-          'type' => 'text',
-          'label' => "Main Category"
-        ]
+          'label' => "Category",
+          'type' => 'select2',
+          'name' => 'category_id', // the db column for the foreign key
+          'entity' => 'category', // the method that defines the relationship in your Model
+          'attribute' => 'category_name', // foreign key attribute that is shown to user
+          'model' => "App\Models\Category",
+       
+          // optional
+          'options'   => (function ($query) {
+               return $query->orderBy('category_name', 'ASC')->get();
+           }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
+          ],
+          [  // Select
+            'tab'=>'Post Detail',
+            'label' => "Category",
+            'type' => 'select2',
+            'name' => 'category_id', // the db column for the foreign key
+            'entity' => 'category', // the method that defines the relationship in your Model
+            'attribute' => 'category_name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Category",
+         
+            // optional
+            'options'   => (function ($query) {
+                 return $query->orderBy('category_name', 'ASC')->get();
+             }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
+            ],
       ];
 
 
