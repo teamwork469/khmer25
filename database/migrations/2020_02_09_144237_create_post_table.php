@@ -19,6 +19,8 @@ class CreatePostTable extends Migration
             $table->integer('category_id');
             $table->string('title');
             $table->string('image',255);
+            $table->integer('gallery_id');
+            $table->string('description');
             $table->timestamps();
         });
     }
