@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers\Admin;
 
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use App\Models\Category as cat;
 
 
 class PostController extends CrudController {
@@ -19,6 +20,7 @@ class PostController extends CrudController {
 
       $this->crud->enableExportButtons();
       //$this->crud->setActionsColumnPriority(10000);
+      
   }
 
 
@@ -97,43 +99,8 @@ class PostController extends CrudController {
       ];
 
 
-     $custom =  [   // CustomHTML
-        'name' => 'separator',
-        'type' => 'custom_html',
-        'value' => 
-        '<form>
-                <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input class="form-control" type="text" placeholder="Enter Text something">
-                      <div>
-                    </div>
-                </div>
-                <div class="row">
-                <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" type="text" placeholder="Enter Text something">
-                  <div>
-                </div>
-            </div>
-            <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <input class="form-control" type="date" placeholder="Enter Text something">
-              <div>
-            </div>
-        </div>
-        </form>
-        <script>
-              $(document).ready(function()); 
-        </script>
-        '
-      ];
-
-      $this->crud->addField($custom);
-
-      // $this->crud->addFields($fields1);
-      // $this->crud->addFields($fields2);
+      $this->crud->addFields($fields1);
+      $this->crud->addFields($fields2);
  
   }
  
