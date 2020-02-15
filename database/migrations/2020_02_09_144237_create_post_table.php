@@ -18,6 +18,7 @@ class CreatePostTable extends Migration
             $table->bigIncrements('post_id');
             $table->integer('category_id');
             $table->string('title');
+            $table->double('price');
             $table->string('image',255);
             $table->integer('gallery_id');
             $table->string('description');
