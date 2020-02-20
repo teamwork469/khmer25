@@ -103,16 +103,16 @@ class PostController extends CrudController {
           ],
           [  // Select
             'tab'=>'Post Detail',
-            'label' => "Category",
+            'label' => "Gallery Detail",
             'type' => 'select2',
-            'name' => 'category_id', // the db column for the foreign key
-            'entity' => 'category', // the method that defines the relationship in your Model
-            'attribute' => 'category_name', // foreign key attribute that is shown to user
-            'model' => "App\Models\Category",
+            'name' => 'gallery_id', // the db column for the foreign key
+            'entity' => 'gallery', // the method that defines the relationship in your Model
+            'attribute' => 'gallery_name', // foreign key attribute that is shown to user
+            'model' => "App\Models\Gallery",
          
             // optional
             'options'   => (function ($query) {
-                 return $query->orderBy('category_name', 'ASC')->get();
+                 return $query->orderBy('gallery_name', 'ASC')->get();
              }), // force the related options to be a custom query, instead of all(); you can use this to filter the results show in the select
             ],
       ];

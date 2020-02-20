@@ -43,6 +43,12 @@ class Category extends Model {
       return $this->belongsTo('App\Models\MainCategory','main_category_id');
     }
 
+    public function gallery()
+    {
+      return $this->belongsTo('App\Models\MainCategory','main_category_id');
+    }
+
+
   /*
   |--------------------------------------------------------------------------
   | SCOPES
