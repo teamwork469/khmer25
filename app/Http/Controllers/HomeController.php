@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\SendMailable;
 
 class HomeController extends Controller
 {
@@ -13,7 +15,8 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->middleware(['auth','verified']);
     }
 
     /**
@@ -23,6 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('front.layouts.master_layout');
+    }
+    public function mail()
+    {
+       $name = 'Krunal';
+       Mail::to('senghoung@appdividend.com')->send(new SendMailable($name));
+       
+       return 'Email was sent';
     }
 }

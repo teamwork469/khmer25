@@ -22,6 +22,10 @@ Route::get('/', 'HomeController@index');
 //     return view('front.register.register');
 // });
 
-Auth::routes();
+
+// Auth::routes();
+Auth::routes(['verify' => true]);
+Route::get('/send/email', 'HomeController@mail');
+
 
 //Route::get('/home', 'HomeController@index')->name('home');
