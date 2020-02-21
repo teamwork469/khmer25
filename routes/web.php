@@ -11,10 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     $value = session('key');
+//     return view('front.layouts.master_layout');
+// });
+
+Route::get('/', 'HomeController@index');
+
+// Route::get('/login-register', function () {
+//     return view('front.register.register');
+// });
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
